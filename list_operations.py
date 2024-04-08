@@ -12,7 +12,7 @@ def head(input_list):
       'Jan'
     """
 
-    return []
+    return input_list[0]
 
 
 def tail(input_list):
@@ -25,7 +25,7 @@ def tail(input_list):
 
     """
 
-    return []
+    return input_list[1:]
 
 
 def last(input_list):
@@ -157,8 +157,8 @@ def replace_third_and_last(input_list):
 
 
 def backwards(input_list):
-    """Return the input list in reverse order. 
-    
+    """Return the input list in reverse order.
+
     You cannot use the built-in reverse() method or reversed() function.
 
     For example:
@@ -172,7 +172,7 @@ def backwards(input_list):
 
 
 def every_other(input_list):
-    """Return every other item in the input list, starting with the first item. 
+    """Return every other item in the input list, starting with the first item.
 
     For example:
 
@@ -218,10 +218,10 @@ def indices_of_positive_numbers(input_list):
 
 def sum_repeats(input_list):
     """
-    Given a list of numbers, return the sum of all numbers that are the same as the 
+    Given a list of numbers, return the sum of all numbers that are the same as the
     next number in the list.
 
-    In this example, there are two 1's next to each other and two 6's next to each 
+    In this example, there are two 1's next to each other and two 6's next to each
     other, so the function should return 7.
 
     >>> sum_repeats([1, 1, 5, 1, 2, 6, 6])
