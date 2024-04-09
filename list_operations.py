@@ -99,8 +99,8 @@ def inner_four(input_list):
     [6, 9, 12, 15]
 
     """
-
-    return []
+    # inclusive start at 2 is the third index - going till 6th index
+    return input_list[2:6]
 
 
 def inner_four_end(input_list):
@@ -115,8 +115,7 @@ def inner_four_end(input_list):
     [12, 15, 18, 21]
 
     """
-
-    return []
+    return input_list[-6:-2]
 
 
 def replace_head(input_list):
@@ -130,10 +129,9 @@ def replace_head(input_list):
     >>> replace_head(multiples)
     >>> multiples
     [42, 3, 6, 9, 12, 15, 18, 21, 24, 27]
-
     """
-
-    pass
+    #pass
+    input_list[0] = 42
 
 
 def replace_third_and_last(input_list):
@@ -147,10 +145,12 @@ def replace_third_and_last(input_list):
     >>> replace_third_and_last(multiples)
     >>> multiples
     [0, 3, 37, 9, 12, 15, 18, 21, 24, 37]
-
+     0  1   2  3   4   5   6   7   8   9
     """
-
-    pass
+    #pass
+    input_list[2] = 37
+    input_list[-1] = 37
+    #input_list[3:-1] = 37
 
 
 def backwards(input_list):
@@ -162,10 +162,9 @@ def backwards(input_list):
 
     >>> backwards(['Jan', 'Feb', 'Mar', 'Apr', 'May'])
     ['May', 'Apr', 'Mar', 'Feb', 'Jan']
-
     """
-
-    pass
+    #pass
+    return input_list[::-1]
 
 
 def every_other(input_list):
@@ -175,11 +174,9 @@ def every_other(input_list):
 
     >>> every_other(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'])
     ['Jan', 'Mar', 'May']
-
     """
-
-    pass
-
+    #pass
+    return input_list[::2]
 
 def delete_third_and_seventh(input_list):
     """Remove third and seventh elements of input_list and return nothing.
@@ -194,24 +191,28 @@ def delete_third_and_seventh(input_list):
     ['Do', 'Re', 'Fa', 'So', 'La', 'Do']
 
     """
-
-    pass
-
+    #pass
+    del input_list[2:7:4]
+    # del input_list[6]
+    # del input_list[2]
 
 ### List Iteration Problems. Built-in methods are allowed for these! ###
 
+##For these last two functions, you are allowed to use for loops and built-in Python functions/methods.
 def indices_of_positive_numbers(input_list):
     """Given a list of numbers, return a list of the indices of all positive numbers.
 
     For example:
-
     >>> indices_of_positive_numbers([1, -2, 3, 5, -8, -13, 21])
     [0, 2, 3, 6]
-
+    enumerate() can get you both the index and the item!
     """
-
-    pass
-
+   #pass
+    positives = [] #initialize a list to return positive nums
+    for i, index in enumerate(input_list): #iterate thru every index that is i of our input_list
+        if index > 0: #if that index is greater than 0, then its positivio
+            positives.append(i) #if so, add that i to our positives list
+    return positives
 
 def sum_repeats(input_list):
     """
@@ -223,7 +224,10 @@ def sum_repeats(input_list):
 
     >>> sum_repeats([1, 1, 5, 1, 2, 6, 6])
     7
-
     """
-
-    pass
+    #pass
+    sum = 0 #line 223 shows 7, returns an int so initialize var for that int sum
+    for i in range(len(input_list) - 1):
+        if input_list[i] == input_list[i + 1]:
+            sum = sum + input_list[i]
+    return sum
