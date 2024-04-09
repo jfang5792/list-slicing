@@ -1,8 +1,7 @@
 def concatenate_new_value(input_list, new_value):
-
     """Return a list that is the same as the input list, but with new_value
     added on to the end.
-    
+
     Do this using list concatenation. You cannot use the append() method.
 
     For example:
@@ -10,32 +9,31 @@ def concatenate_new_value(input_list, new_value):
     >>> months = ['Jan', 'Feb', 'Mar', 'Apr', May', 'Jun']
     >>> concatenate_new_value(months, 'Jul')
     ['Jan', 'Feb', 'Mar', 'Apr', May', 'Jun', 'Jul']
-
     """
-
-    pass
+    #pass
+    return input_list + [new_value]
 
 
 def pig_latin(word):
-
-    """Given a word, return the Pig Latin version of the word. 
-
+    """Given a word, return the Pig Latin version of the word.
     Pig Latin Rules:
-        1. If the word begins with a consonant (not a, e, i, o, u), 
+        1. If the word begins with a consonant (not a, e, i, o, u),
            move the first letter to the end and add ‘ay’
         2. If the word begins with a vowel, add ‘yay’ to the end
-    
     For example:
-
     >>> pig_latin('porcupines')
     'orcupinespay'
 
     >>> pig_latin('apple')
     'appleyay'
-    
     """
-
-    pass
+    #pass
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    if word[0] in vowels: #if the first letter in the word beings with a vowel
+        new_word = word + 'yay'
+    else:
+        new_word = word[1:] + word[0] + 'ay' #else move first letter to the end
+    return new_word
 
 
 def replace_middle(input_list):
@@ -78,15 +76,14 @@ def delete_middle(input_list):
 
 
 def double_with_list_comprehension(input_list):
-    """Given a list of numbers, return a list with all numbers doubled. 
+    """Given a list of numbers, return a list with all numbers doubled.
 
     Use a list comprehension to do this.
-    
+
     For example:
 
     >>> double_with_list_comprehension([1, 2, 3, 4, 5])
     [2, 4, 6, 8, 10]
-    
     """
 
     pass
@@ -95,12 +92,12 @@ def double_with_list_comprehension(input_list):
 def multiplication_table(n):
     """ Return a multiplication table for the given number, in the form
     of a 2D array.
-    
+
     For example:
 
     >>> multiplication_table(3)
     [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
-    
+
     """
 
     pass
