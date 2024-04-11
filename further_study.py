@@ -52,8 +52,8 @@ def replace_middle(input_list):
     [0, 3, 42, 37, 24, 27]
 
     """
-
-    pass
+    #pass
+    input_list[2:-2] = [42, 37]
 
 
 def delete_middle(input_list):
@@ -72,8 +72,8 @@ def delete_middle(input_list):
 
     """
 
-    pass
-
+    #pass
+    input_list[2:-2] = []
 
 def double_with_list_comprehension(input_list):
     """Given a list of numbers, return a list with all numbers doubled.
@@ -85,9 +85,9 @@ def double_with_list_comprehension(input_list):
     >>> double_with_list_comprehension([1, 2, 3, 4, 5])
     [2, 4, 6, 8, 10]
     """
-
-    pass
-
+    #pass
+    numbers_doubled = [number * 2 for number in input_list]
+    return numbers_doubled
 
 def multiplication_table(n):
     """ Return a multiplication table for the given number, in the form
@@ -99,5 +99,10 @@ def multiplication_table(n):
     [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
 
     """
-
-    pass
+    #pass
+    table = []
+    numbers = list(range(1, n + 1))
+    for number in range(1, n + 1):
+        row = [num * number for num in numbers]
+        table.append(row)
+    return table
