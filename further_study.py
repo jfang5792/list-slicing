@@ -86,8 +86,9 @@ def double_with_list_comprehension(input_list):
     [2, 4, 6, 8, 10]
     """
     #pass
-    numbers_doubled = [number * 2 for number in input_list]
-    return numbers_doubled
+    # numbers_doubled = [number * 2 for number in input_list]
+    # return numbers_doubled
+    return [number * 2 for number in input_list]
 
 def multiplication_table(n):
     """ Return a multiplication table for the given number, in the form
